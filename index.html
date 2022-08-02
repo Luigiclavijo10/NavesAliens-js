@@ -10,23 +10,35 @@
 </head>
 <body>
     <div class="container">
-        <form>
-            <div class="mb-3">
+        <form id="formulario">
+            <div class="persona">
               <label for="NombreUsuario" class="form-label">NombreUsuario</label>
               <input type="text" class="form-control" id="NombreUsuario">
             </div>
             <div class="mb-3">
-                <label for="EmailUsuario" class="form-label">EmailUsuario</label>
+                <label for="EmailUsuario" class="form-label">EmaillUsuario</label>
                 <input type="email" class="form-control" id="EmailUsuario">
               </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="Password1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="Password1">
             </div>
-            <button type="submit" class="btn btn-primary">Crear Usuario</button>
+            <div class="mb-3">
+              <label for="edad" class="form-label">Edad</label>
+              <input type="text" class="form-control" id="Edad">
+            </div>
+            <button type="submit" class="btn btn-primary"id="admin">Crear Usuario</button>
           </form>
-    </div>
+              </div>
     <br><br>
+
+    <div class="row">
+      <div class="col-12 text-center" id="infoUsuarios"></div>
+  </div>
+  <button class="btn btn-lg px-4 gap-3 colorBoton m-3" id="admin"> Admin </button>
+  <div class="row">
+      <div id="datosAdmin"></div>
+  </div>
 
     <h1 class="resultados">0</h1>
   

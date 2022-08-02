@@ -1,3 +1,85 @@
+// Creamos clases. 
+
+class Persona {
+    constructor (nombre, email,password,edad) {
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.edad = edad;
+    }
+
+}
+
+//Creamos un array de objetos. 
+
+const personas = [];
+
+
+//Creamos las variables necesarias: 
+
+const idFormulario = document.getElementById('formulario');
+
+idFormulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const edad = document.getElementById('edad').value;
+    //Creamos el objeto persona
+    const persona = new Persona (nombre, email, password,edad);
+    //Agregamos los datos en el array
+    personas.push(persona);
+    //Guardamos los datos en el localStorage. 
+    localStorage.setItem('Persona', JSON.stringify(personas));
+
+
+    //Muestro el resultado con la siguiente función: 
+    mostrarInfo(persona);
+})
+
+
+const resultado = document.getElementById('infoUsuarios');
+
+const mostrarInfo = (persona) => {
+    resultado(edad)
+ 
+}
+
+//Muestro el localStorage. 
+
+const botonAdmin = document.getElementById('admin');
+const datosAdmin = document.getElementById('datosAdmin');
+
+
+
+//Condicion ser Mayor de Edad//
+
+/**let edad = 18;
+let resultad;
+
+
+if (edad < 18 ){
+    resultado = "menor de edad";
+    }else{
+        resultado = "mayor de edad";
+    }
+
+
+    console.log(resultado);
+
+    console.log ();
+
+    resultado = edad < 22 ? "menor de edad" : "mayor de edad";
+
+    console.log(resultado)
+
+    console.log();
+
+    resultado = edad <= 12 ? "niño" : edad < 21 ? "adolecente" : "adulto";
+    
+    console.log(resultado)*/
+
+    
 // crear juego//
 
 const grid = document.querySelector(".grid")
@@ -16,7 +98,7 @@ for (let i = 0; i < 255 ; i++) {
 const cuadros = Array.from(document.querySelectorAll(".grid div"))
 
 const alienInvasores = [
-    0,1,2,3,4,5,6,7,8,9,
+      0,1,2,3,4,5,6,7,8,9,10,11,12
     ,15,16,17,18,19,20,21,22,23,24
     ,30,31,32,33,34,35,36,37,38,39
 ]
